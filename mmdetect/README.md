@@ -44,9 +44,13 @@ $ conda activate openmmlab
 ```
 Install PyTorch following official instructions, e.g.
 On GPU platforms:
+```
 $ conda install pytorch torchvision -c pytorch
+```
 On CPU platforms:
+```
 $ conda install pytorch torchvision cpuonly -c pytorch
+```
 ```
 Install  mmcv
 pip install -U openmim
@@ -57,7 +61,6 @@ mim install mmcv==2.0.0
 git clone https://github.com/open-mmlab/mmdetection.git
 cd mmdetection
 pip install -v -e .
-
 ```
 
 **Step 3: Testing with pretrain model**
