@@ -45,14 +45,15 @@ $ conda activate openmmlab
 Install PyTorch following official instructions, e.g.
 On GPU platforms:
 ```
-$ conda install pytorch torchvision -c pytorch
+$ pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu116
 ```
 On CPU platforms:
 ```
 $ conda install pytorch torchvision cpuonly -c pytorch
 ```
-```
+
 Install  mmcv
+```
 pip install -U openmim
 mim install mmengine
 mim install mmcv==2.0.0
