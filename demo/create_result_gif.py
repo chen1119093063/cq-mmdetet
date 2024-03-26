@@ -27,7 +27,7 @@ def parse_args():
         type=str,
         default='result.gif',
         help='gif path where will be saved')
-    args = parser.parse_args()
+    args = parser.parse_args() #ddd
     return args
 
 
