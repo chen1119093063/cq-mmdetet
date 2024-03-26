@@ -65,49 +65,10 @@ pip install -v -e .
 
 **Step 3: Testing with pretrain model**
 
-DETR pretrain models and training logs ([Baiduyun](https://pan.baidu.com/s/1CMAdhZ_9KvPnLfO7lyyaUA), passwd: 5hvr) or [Google Drive](https://drive.google.com/drive/folders/1ohpMnVsgzGi_k2GTgvJwZ3zlHSX1r5LX?usp=sharing).
 
-YOLO-V3 pretrain models and training logs ([Baiduyun](https://pan.baidu.com/s/1tPXOBNC-6XElwvoIMPGPXQ), passwd: m6u4) or [Google Drive](https://drive.google.com/drive/folders/1n0Pi9kgeMF-nKXpS4-DLEoTwX_T9Lasz?usp=sharing).
-
-Example of evaluation IAT-DETR-model (trained with LOL dataset/ MIT5K dataset weights):
-
-```
-$ python tools/test.py configs/detr/detr_ours_LOL.py DETR/detr_IAT_LOLpre.pth --eval mAP
-
-$ python tools/test.py configs/detr/detr_ours_MIT5k.py DETR/detr_IAT_MIT5Kpre.pth --eval mAP
-```
-
-Example of evaluation IAT-YOLO-V3-model (trained with LOL dataset/ MIT5K dataset weights):
-
-```
-$ python tools/test.py configs/yolo/yolov3_IAT_lol.py YOLO_V3/YOLOV3_IAT_LOLpre.pth --eval mAP
-
-$ python tools/test.py configs/yolo/yolov3_IAT_mit5k.py YOLO_V3/YOLOV3_IAT_MIT5Kpre.pth --eval mAP
-```
-
-For more baseline models, please see this repo: [MAET (ICCV 2021)](https://github.com/cuiziteng/ICCV_MAET).
 
 **Step 4: Training your own model**
 
-By default, the DETR is trained on 2 GPUs with per GPU batch size 2 (2 x 2): 
-
-```
-$ CUDA_VISIBLE_DEVICES=0,1 PORT=29501 bash tools/dist_train.sh configs/detr/detr_ours_LOL.py 2
-
-or
-
-$ CUDA_VISIBLE_DEVICES=0,1 PORT=29501 bash tools/dist_train.sh configs/detr/detr_ours_MIT5k.py 2
-```
-
-and YOLOV3 is trained on 1 GPUs with per GPU batch size 8 (1 x 8):
-
-```
-$ python tools/train.py configs/yolo/yolov3_IAT_lol.py --gpu-ids 0
-
-or
-
-$ python tools/train.py configs/yolo/yolov3_IAT_mit5k.py --gpu-ids 0
-```
 
 
 **Others:**
@@ -139,12 +100,12 @@ Dataset Citation:
 Code Usage Citation:
 
 ```
-@InProceedings{Cui_2021_ICCV,
-    author    = {Cui, Ziteng and Qi, Guo-Jun and Gu, Lin and You, Shaodi and Zhang, Zenghui and Harada, Tatsuya},
-    title     = {Multitask AET With Orthogonal Tangent Regularity for Dark Object Detection},
-    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
-    month     = {October},
-    year      = {2021},
-    pages     = {2553-2562}
+@InProceedings{,
+    author    = {Cq},
+    title     = {},
+    booktitle = {},
+    month     = {},
+    year      = {},
+    pages     = {}
 }
 ```
