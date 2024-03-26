@@ -37,15 +37,27 @@ EXDark
 
 **Step 2: Enviroment Setting**
 
-Download mmcv 1.3.8~1.4.0, and download adapte to your own cuda version and torch version:
+Download mmcv 2.0, and download adapte to your own cuda version and torch version:
 ```
-$ pip install mmcv-full==1.4.0 -f https://download.openmmlab.com/mmcv/dist/cu110/torch1.7.1/index.html
+$ conda create --name openmmlab python=3.8 -y
+$ conda activate openmmlab
 ```
-then set up mmdet (2.15.1):
+Install PyTorch following official instructions, e.g.
+On GPU platforms:
+$ conda install pytorch torchvision -c pytorch
+On CPU platforms:
+$ conda install pytorch torchvision cpuonly -c pytorch
 ```
-$ pip install opencv-python scipy
-$ pip install -r requirements/build.txt
-$ pip install -v -e .
+Install  mmcv
+pip install -U openmim
+mim install mmengine
+mim install mmcv==2.0.0
+```
+```
+git clone https://github.com/open-mmlab/mmdetection.git
+cd mmdetection
+pip install -v -e .
+
 ```
 
 **Step 3: Testing with pretrain model**
