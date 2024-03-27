@@ -2,7 +2,7 @@
 import argparse
 import os
 import os.path as osp
-
+# os.environ['CUDA_VISIBLE_DEVICES'] = '0,1'
 from mmengine.config import Config, DictAction
 from mmengine.registry import RUNNERS
 from mmengine.runner import Runner

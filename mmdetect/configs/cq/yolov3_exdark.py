@@ -1,5 +1,6 @@
 _base_ = ['../_base_/schedules/schedule_1x.py', '../_base_/default_runtime.py']
 # model settings
+load_from = 'https://download.openmmlab.com/mmdetection/v2.0/yolo/yolov3_d53_mstrain-608_273e_coco/yolov3_d53_mstrain-608_273e_coco_20210518_115020-a2c3acb8.pth'
 data_preprocessor = dict(
     type='DetDataPreprocessor',
     mean=[0, 0, 0],
@@ -93,14 +94,14 @@ train_pipeline = [
         type='MinIoURandomCrop',
         min_ious=(0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
         min_crop_size=0.3),
-    dict(type='RandomResize', scale=[(320, 320), (608, 608)], keep_ratio=True),
+    dict(type='RandomResize', scale=[(1333, 400), (1333, 800)], keep_ratio=True),
     dict(type='RandomFlip', prob=0.5),
     dict(type='PhotoMetricDistortion'),
     dict(type='PackDetInputs')
 ]
 test_pipeline = [
     dict(type='LoadImageFromFile', backend_args=backend_args),
-    dict(type='Resize', scale=(608, 608), keep_ratio=True),
+    dict(type='Resize', scale=(1333, 800), keep_ratio=True),
     dict(type='LoadAnnotations', with_bbox=True),
     dict(
         type='PackDetInputs',
@@ -150,7 +151,7 @@ val_evaluator = dict(
     )
 test_evaluator = val_evaluator
 
-train_cfg = dict(max_epochs=250, val_interval=1)
+train_cfg = dict(max_epochs=25, val_interval=1)
 
 # optimizer
 optim_wrapper = dict(
@@ -161,7 +162,7 @@ optim_wrapper = dict(
 # learning policy
 param_scheduler = [
     dict(type='LinearLR', start_factor=0.1, by_epoch=False, begin=0, end=2000),
-    dict(type='MultiStepLR', by_epoch=True, milestones=[218, 246], gamma=0.1)
+    dict(type='MultiStepLR', by_epoch=True, milestones=[18, 23], gamma=0.1)
 ]
 
 default_hooks = dict(checkpoint=dict(type='CheckpointHook', interval=7))
