@@ -39,17 +39,17 @@ EXDark
 
 Download mmcv 2.0, and download adapte to your own cuda version and torch version:
 ```
-$ conda create --name openmmlab python=3.8 -y
-$ conda activate openmmlab
+conda create --name cq python=3.8 -y
+conda activate cq
 ```
 Install PyTorch following official instructions, e.g.
 On GPU platforms:
 ```
-$ pip install torch==1.13.0+cu116 torchvision==0.14.0+cu116 torchaudio==0.13.0 --extra-index-url https://download.pytorch.org/whl/cu116
+pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113
 ```
 On CPU platforms:
 ```
-$ conda install pytorch torchvision cpuonly -c pytorch
+conda install pytorch torchvision cpuonly -c pytorch
 ```
 
 Install  mmcv
