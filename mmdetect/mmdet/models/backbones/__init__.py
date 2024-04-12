@@ -21,11 +21,14 @@ from .GSAD_model.test import GSAD
 from .Retinexformer.model import RetinexFormerNET
 from .Zero_DCE.lowlight_test import Zero_DCE
 from .Bread.test import BreadNET
+from .LLformer.test import LLformerNET
+from .PairLIEnet.eval import pairLIENET
+
 __all__ = [
     'RegNet', 'ResNet', 'ResNetV1d', 'ResNeXt', 'SSDVGG', 'HRNet',
     'MobileNetV2', 'Res2Net', 'HourglassNet', 'DetectoRS_ResNet',
     'DetectoRS_ResNeXt', 'Darknet', 'ResNeSt', 'TridentResNet', 'CSPDarknet',
     'SwinTransformer', 'PyramidVisionTransformer',
     'PyramidVisionTransformerV2', 'EfficientNet', 'CSPNeXt',
-    'GSAD','RetinexFormerNET','Zero_DCE','BreadNET'
+    'GSAD','RetinexFormerNET','Zero_DCE','BreadNET','LLformerNET','pairLIENET'
 ]
