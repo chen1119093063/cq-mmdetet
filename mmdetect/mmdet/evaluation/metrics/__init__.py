@@ -24,6 +24,7 @@ from .semseg_metric import SemSegMetric
 from .voc_metric import VOCMetric
 from .youtube_vis_metric import YouTubeVISMetric
 from .exdark_metric import ExdarkMetric
+from .darkface_metric import DarkFaceMetric
 
 __all__ = [
     'CityScapesMetric', 'CocoMetric', 'CocoPanopticMetric', 'OpenImagesMetric',
@@ -32,5 +33,5 @@ __all__ = [
     'MOTChallengeMetric', 'CocoVideoMetric', 'ReIDMetrics', 'YouTubeVISMetric',
     'COCOCaptionMetric', 'SemSegMetric', 'RefSegMetric', 'RefExpMetric',
     'gRefCOCOMetric', 'DODCocoMetric', 'DumpODVGResults', 'Flickr30kMetric',
-    'OVCocoMetric','ExdarkMetric'
+    'OVCocoMetric','ExdarkMetric','DarkFaceMetric'
 ]

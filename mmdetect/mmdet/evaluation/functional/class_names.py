@@ -732,6 +732,7 @@ def lvis_classes() -> list:
 dataset_aliases = {
     'voc': ['voc', 'pascal_voc', 'voc07', 'voc12'],
     'exdark': ['exdark'],
+    'darkface': ['darkface'],
     'imagenet_det': ['det', 'imagenet_det', 'ilsvrc_det'],
     'imagenet_vid': ['vid', 'imagenet_vid', 'ilsvrc_vid'],
     'coco': ['coco', 'mscoco', 'ms_coco'],
@@ -749,6 +750,12 @@ def exdark_classes() -> list:
     return [
         'Bicycle', 'Boat', 'Bottle', 'Bus', 'Car', 'Cat', 'Chair',
                'Cup', 'Dog', 'Motorbike', 'People', 'Table'
+    ]
+
+def darkface_classes() -> list:
+    """Class names of   darkface."""
+    return [
+        'face'
     ]
 
 def get_classes(dataset) -> list:

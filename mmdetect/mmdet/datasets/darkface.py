@@ -11,7 +11,7 @@ from .base_det_dataset import BaseDetDataset
 
 
 @DATASETS.register_module()
-class ExdarkDataset(BaseDetDataset):
+class DarkFaceDataset(BaseDetDataset):
     """XML dataset for detection.
 
     Args:
@@ -20,13 +20,12 @@ class ExdarkDataset(BaseDetDataset):
         backend_args (dict, optional): Arguments to instantiate the
             corresponding backend. Defaults to None.
     """
-    CLASSES = ('Bicycle', 'Boat', 'Bottle', 'Bus', 'Car', 'Cat', 'Chair',
-               'Cup', 'Dog', 'Motorbike', 'People', 'Table')
+    CLASSES = ('face',)
     def __init__(self,
-                 data_prefix: str = 'Exdark/JPEGImages/IMGS',
-                 ann_subdir: str = 'Exdark/Annotations/LABLE',
+                 data_prefix: str = 'DarkFace_Train_2021/image',
+                 ann_subdir: str = 'DarkFace_Train_2021/label_xml',
                  **kwargs) -> None:
-        self.img_subdir ='Exdark/'+ data_prefix.img
+        self.img_subdir ='DarkFace_Train_2021/'+ data_prefix.img
         self.ann_subdir = ann_subdir
         super().__init__(**kwargs)
 

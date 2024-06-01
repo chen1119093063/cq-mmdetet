@@ -35,6 +35,7 @@ from .wider_face import WIDERFaceDataset
 from .xml_style import XMLDataset
 from .youtube_vis_dataset import YouTubeVISDataset
 from .exdark import ExdarkDataset
+from .darkface import DarkFaceDataset
 
 
 __all__ = [
@@ -51,5 +52,5 @@ __all__ = [
     'BaseSegDataset', 'ADE20KSegDataset', 'CocoSegDataset',
     'ADE20KInstanceDataset', 'iSAIDDataset', 'V3DetDataset', 'ConcatDataset',
     'ODVGDataset', 'MDETRStyleRefCocoDataset', 'DODDataset',
-    'CustomSampleSizeSampler', 'Flickr30kDataset','ExdarkDataset'
+    'CustomSampleSizeSampler', 'Flickr30kDataset','ExdarkDataset','DarkFaceDataset'
 ]
