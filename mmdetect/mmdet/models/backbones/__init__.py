@@ -23,12 +23,18 @@ from .Zero_DCE.lowlight_test import Zero_DCE
 from .Bread.test import BreadNET
 from .LLformer.test import LLformerNET
 from .PairLIEnet.eval import pairLIENET
-
+from .Zero_DCE_ex.lowlight_test import Zero_DCE_EX 
+from .MAET.aet import AETnet,AETdecoder_Reg,AETdecoder_dark
+from .Kind.lowlight_test import KinDNet
+from .EFOD.ours import CQ_DENet
+from .EFOD.new_ours import CQ_new_DENet
+from .EFOD.ours_up import CQ_up_DENet
 __all__ = [
     'RegNet', 'ResNet', 'ResNetV1d', 'ResNeXt', 'SSDVGG', 'HRNet',
     'MobileNetV2', 'Res2Net', 'HourglassNet', 'DetectoRS_ResNet',
     'DetectoRS_ResNeXt', 'Darknet', 'ResNeSt', 'TridentResNet', 'CSPDarknet',
     'SwinTransformer', 'PyramidVisionTransformer',
     'PyramidVisionTransformerV2', 'EfficientNet', 'CSPNeXt',
-    'GSAD','RetinexFormerNET','Zero_DCE','BreadNET','LLformerNET','pairLIENET'
+    'GSAD','RetinexFormerNET','Zero_DCE','BreadNET','LLformerNET','pairLIENET','Zero_DCE_EX',
+    'AETdecoder_dark','AETnet','AETdecoder_Reg','KinDNet','CQ_DENet','CQ_new_DENet','CQ_up_DENet'
 ]
