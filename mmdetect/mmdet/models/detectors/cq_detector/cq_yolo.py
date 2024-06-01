@@ -43,7 +43,7 @@ class CQ_YOLOV3(SingleStageDetector):
                 different resolutions.
             """
             x = self.pre_encoder(batch_inputs)
-            torchvision.utils.save_image(x,"123.jpg")
+            # torchvision.utils.save_image(x,"123.jpg")
             x = self.backbone(x)
             if self.with_neck:
                 x = self.neck(x)

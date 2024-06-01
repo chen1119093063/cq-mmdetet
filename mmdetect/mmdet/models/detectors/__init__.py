@@ -58,8 +58,14 @@ from .yolact import YOLACT
 from .yolo import YOLOV3
 from .yolof import YOLOF
 from .yolox import YOLOX
-from .cq_detector.cq_yolov3 import CQ_YOLOV3
-
+from .cq_detector.cq_yolo import CQ_YOLOV3
+from .cq_detector.cq_retinanet import CQ_RetinaNet
+from .cq_detector.cq_fasterrcnn import CQ_FasterRCNN
+from .cq_detector.cq_CascadeRCNN import CQ_CascadeRCNN
+from .cq_detector.cq_detr import CQ_DETR
+from .cq_detector.cq_tood import CQ_TOOD
+from .cq_detector.cq_dino import CQ_DINO
+from .cq_detector.cq_ddq_detr import CQ_DDQDETR
 __all__ = [
     'ATSS', 'BaseDetector', 'SingleStageDetector', 'TwoStageDetector', 'RPN',
     'KnowledgeDistillationSingleStageDetector', 'FastRCNN', 'FasterRCNN',
@@ -72,5 +78,6 @@ __all__ = [
     'MaskFormer', 'DDOD', 'Mask2Former', 'SemiBaseDetector', 'SoftTeacher',
     'RTMDet', 'Detectron2Wrapper', 'CrowdDet', 'CondInst', 'BoxInst',
     'DetectionTransformer', 'ConditionalDETR', 'DINO', 'DABDETR', 'GLIP',
-    'DDQDETR', 'GroundingDINO','CQ_YOLOV3'
+    'DDQDETR', 'GroundingDINO','CQ_YOLOV3','CQ_RetinaNet','CQ_FasterRCNN',
+    'CQ_CascadeRCNN','CQ_DETR','CQ_TOOD','CQ_DINO','CQ_DDQDETR'
 ]
