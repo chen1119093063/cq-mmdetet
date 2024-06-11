@@ -29,6 +29,7 @@ from .Kind.lowlight_test import KinDNet
 from .EFOD.ours import CQ_DENet
 from .EFOD.new_ours import CQ_new_DENet
 from .EFOD.ours_up import CQ_up_DENet
+from .DENet.model import DENet
 __all__ = [
     'RegNet', 'ResNet', 'ResNetV1d', 'ResNeXt', 'SSDVGG', 'HRNet',
     'MobileNetV2', 'Res2Net', 'HourglassNet', 'DetectoRS_ResNet',
@@ -36,5 +37,5 @@ __all__ = [
     'SwinTransformer', 'PyramidVisionTransformer',
     'PyramidVisionTransformerV2', 'EfficientNet', 'CSPNeXt',
     'GSAD','RetinexFormerNET','Zero_DCE','BreadNET','LLformerNET','pairLIENET','Zero_DCE_EX',
-    'AETdecoder_dark','AETnet','AETdecoder_Reg','KinDNet','CQ_DENet','CQ_new_DENet','CQ_up_DENet'
+    'AETdecoder_dark','AETnet','AETdecoder_Reg','KinDNet','CQ_DENet','CQ_new_DENet','CQ_up_DENet','DENet'
 ]
